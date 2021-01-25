@@ -1,0 +1,21 @@
+<h2>My Schedules</h2>
+
+<p class="link-new">
+<%= link_to '新規作成', new_schedule_path, class: 'new_schedule' %>
+</p>
+
+<table>
+    <tr>
+        <th>タイトル</th><th>開始日</th><th>終了日</th><th>編集</th><th>削除</th><th>作成日時</th><th>更新日時</th>
+    </tr>
+    <% @schedules.each do |schedule| %>
+    <tr>
+        <td><%= link_to schedule.title,schedule_path(schedule) ,class: 's_title' %></td><td><%= schedule.start %></td><td><%= schedule.end %></td>
+        <td><%= link_to '編集', edit_schedule_path(schedule), class: 'command' %></td>
+        <td><%= link_to '削除', schedule_path(schedule), method: :delete, class: 'command', data:{confirm: '消していいの？'} %></td>
+        <td><%= schedule.created_at.strftime("%Y-%m-%d %H:%M") %></td>
+        <td><%= schedule.updated_at.strftime("%Y-%m-%d %H:%M") %></td>
+    </tr>
+    <% end %>
+</table>
+

@@ -1,0 +1,23 @@
+<%= form_for @schedule do |f| %>
+<p>
+    <%= f.text_field :title, placeholder: 'タイトルを入力', class: 'field' %>
+</p>
+<label class="start_message">開始日を選んでね</label>
+<p>
+    <%= f.date_field :start, class: 'field' %>
+</p>
+<label class="end_message">終了日を選んでね</label>
+<p>
+    <%= f.date_field :end, class: 'field' %>
+</p>
+<p>
+    <%= f.text_area :body, placeholder: '内容を入力', class: 'area' %>
+    <% if @schedule.errors.messages[:body].any? %>
+    <span class="error"><%= @schedule.errors.messages[:body][0] %></span>
+    <% end %>
+</p>
+<p>
+    <%= f.submit class: 'button' %>
+</p>
+
+<% end %>
