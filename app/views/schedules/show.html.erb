@@ -1,0 +1,22 @@
+<h2>スケジュール詳細</h2>
+
+<table>
+    <tr>
+        <th>タイトル</th>
+        <td><%= @schedule.title %></td>
+    </tr>
+    <tr>
+        <th>開始日</th>
+        <td><%= @schedule.start %></td>
+    </tr>
+    <tr>
+        <th>終了日</th>
+        <td><%= @schedule.end %></td>
+    </tr>
+    <tr>
+        <th>内容</th>
+        <td><%= simple_format @schedule.body %></td>
+    </tr>
+</table>
+
+<h5><%= link_to 'スケジュール一覧へ戻る',root_path %></h5>

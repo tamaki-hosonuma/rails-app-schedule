@@ -13,3 +13,140 @@
  *= require_tree .
  *= require_self
  */
+
+html{
+    max-width: 1300px;
+    height: 600px;
+}
+
+body{
+    font-size: 14px;
+    font-family: '07ロゴたいぷゴシック7';
+    background-image: url(block.png);
+    
+}
+
+
+h2{
+    display: inline-block;
+    border-bottom: dotted 5px #dea5b3;
+    color: #de82a7;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+.header{
+    font-family: '07ロゴたいぷゴシック7';
+}
+
+
+table th{
+    padding: 15px;
+    background-color: rgb(160, 82, 45);
+    background: linear-gradient(45deg, rgb(241,156,187), rgb(245,195,194) );
+}
+table td{
+    padding: 5px 15px;
+    background-color: rgba(255,255,255,0.9);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.link-new{
+    text-align: right;
+}
+
+.s_title{
+    text-decoration: none;
+    color: #d83473;
+}
+
+.s_title:hover{
+    text-decoration: underline;
+}
+
+.new_schedule{
+    text-decoration: none;
+    font-size: 15px;
+    display: inline-block;
+    color: #de82a7;
+}
+
+textarea{
+    width: 400px;
+    height: 150px;
+}
+
+textarea::placeholder{
+    font-weight: lighter;
+    color: #e3adc1;
+    
+}
+
+input::placeholder{
+    font-weight: lighter;
+    color: #e3adc1;
+    
+}
+
+.error{
+    font-weight: bold;
+    color: tomato;
+}
+
+.button{
+    background-color: #f19cbb;
+    color: #fff;
+    height: 40px;
+    border-radius: 10px;
+    border: solid 1px ;
+}
+
+.button:hover{
+    cursor: pointer;
+}
+
+.new_start::hover{
+    text-decoration: none;
+}
+
+.command{
+    text-decoration: none;
+    color: #de82a7;
+}
+
+.command:hover{
+    text-decoration: underline;
+}
+
+.start_message,.end_message{
+    margin-bottom: 3px;
+    margin-top: 3px;
+    font-size: 12px;
+    color: #e3adc1;
+}
+
+.field{
+    border: solid 1px #debecc;
+    font-family: '07ロゴたいぷゴシック7';
+    color: #d83473;
+    background-color: rgba(255,255,255,0.8);
+    height: 20px;
+    width: 400px;
+}
+
+.area{
+    border: solid 1px #debecc;
+    font-family: '07ロゴたいぷゴシック7';
+    color: #d83473;
+    background-color: rgba(255,255,255,0.8);
+}
+
+label + p{
+    margin-top: 0;
+}
